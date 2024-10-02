@@ -15,3 +15,9 @@ CREATE TABLE games (
     time TIME,
     user_id INTEGER
 );
+
+CREATE TABLE players_joined (
+    id SERIAL PRIMARY KEY,
+    game_id INTEGER,
+    user_id INTEGER
+);

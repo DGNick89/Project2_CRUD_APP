@@ -1,7 +1,62 @@
+/* *{
+    border: solid 1px red;
+} */
+
+.title {
+    text-align: center;
+    color: white;
+}
+
+.logged {
+    color: white;
+    font-size: 20px;
+}
+
+.sport {
+    text-align: center;
+}
+
+nav {
+    border: solid 1px white;
+}
+
+.games {
+    border-radius: 5%;
+    border: solid 1px white;
+    padding: 0 5px;
+    margin: 5px;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(28,121,9,1) 100%);
+}
+
 body {
-    background-color:aquamarine;
+    background-image: url('https://slidescorner.com/wp-content/uploads/2022/09/02-Bob-Green-Grass-Soccer-Field-Background-by-SlidesCorner.jpg');
+    background-size: cover;
 }
 .profile-pic {
     border-radius: 50%;
     width: 50px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    background: rgb(28,121,9);
+    background: radial-gradient(circle, rgba(28,121,9,1) 0%, rgba(255,255,255,1) 100%);
+    border-radius: 5%;
+    align-items: center;
+}
+
+a {
+    color: white;
+}
+
+nav {
+    font-size: 35px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
 }

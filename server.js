@@ -82,7 +82,7 @@ app.post('/signup', (req, res) => {
                 
                 const user = result.rows[0]
                 console.log(user);
-                res.render('/')
+                res.render('home')
             })
         })
     })
@@ -145,8 +145,7 @@ app.post('/new', (req, res) => {
             console.log(err)            
         }
         let games = result.rows
-        console.log(games);
-        res.render('/', {games})
+        res.render('home', {games})
     })
 }) 
 
@@ -162,24 +161,45 @@ app.get('/game/:id', (req, res) => {
             if (err) {
                 console.log(err)                
             }
+            const sql = `
+            SELECT players_joined.*,
+            users.name, users.profile_pic FROM players_joined
+            JOIN users on players_joined.user_id = users.id
+            WHERE game_id = $1;
+            `
             let game = result.rows[0]
-            res.render('index', {game})
+            let noPlayers = 'Be the first to join this game!'
+            db.query(sql, [req.params.id], (err, result) => {
+                let users = result.rows
+                if (err) {
+                    console.log(err)                    
+                }
+                if (users === 0) {
+                    noPlayers
+                }
+                
+
+                res.render('index', {game, users, noPlayers})
+            })
+            
         })
     
 })
 
 app.post('/game/:id', (req, res) => {
     let sql = `
-    SELECT name, profile_pic
-    FROM users
-    WHERE id = $1`
-    db.query(sql, [req.session.userId], (err, result) => {
+    INSERT INTO players_joined
+    (game_id, user_id)
+    VALUES
+    ($1, $2);
+    `
+    db.query(sql, [req.params.id, req.session.userId], (err, result) => {
         if (err) {
-            console.log(err)            
+            console.log(err) 
         }
-        let user = result.rows[0]
-        console.log(user)
-        res.render('index', {user})
+        let game = result.rows
+        let users = result.rows
+        res.render('index', {game, users})
         
     })
 })

@@ -2,8 +2,13 @@
 <h2><%= game.location %></h2>
 <h2><%= game.time %></h2>
 <h2>Game hosted by <img src="<%= game.profile_pic %>" class="profile-pic"> <%= game.name %> </h2>
-<form action="/game/:id" method="post">
+<form action="/game/<%= game.id %>" method="post">
     <button>JOIN GAME</button>
 </form>
-
-<h2>Players: <img src="<%= user.profile_pic %>" class="profile-pic"><%= user.name %></h2>
+<% for (let user of users) { %>
+<% if (!users) { %>
+   <p><%= noPlayers %></p>
+    <% } else { %> 
+<h2>Players: <img src="<%= user.profile_pic %>" class="profile-pic"> <%= user.name %></h2>
+<% } %>
+<% } %>

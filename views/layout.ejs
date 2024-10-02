@@ -8,23 +8,23 @@
 </head>
 <body>
     <% if (isLoggedIn) {%>
-    <p>Logged in as <%= currentUser.name %></p>
+    <p class="logged">Logged in as <%= currentUser.name %></p>
         <% } %>
     <nav>
-        <a href="/">HOME</a>
-        <a href="/about">ABOUT US</a>
+        <a href="/" class="navbar">HOME</a>
+        <a href="/about" class="navbar">ABOUT US</a>
         <% if (isLoggedIn) { %>
-        <a href="/new">HOST YOUR OWN GAME</a>
+        <a href="/new" class="navbar">HOST YOUR OWN GAME</a>
         <form action="/session/?_method=delete" method="post">            
-            <button>LOGOUT</button>
+            <button class="navbar">LOGOUT</button>
         </form>
         <% } else { %>
-            <a href="/login">LOGIN</a>
+            <a href="/login" class="navbar">LOGIN</a>
             <% } %>
 
     </nav>
 
-    <h1>Find Your Game</h1>
+    <h1 class="title">Find Your Game</h1>
 
     <%- body %>
 </body>
