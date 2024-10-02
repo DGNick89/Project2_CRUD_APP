@@ -7,3 +7,11 @@ CREATE TABLE users (
     password_digest TEXT,
     profile_pic TEXT
 );
+
+CREATE TABLE games (
+    id SERIAL PRIMARY KEY,
+    sport TEXT,
+    location TEXT,
+    time INTEGER,
+    user_id INTEGER
+);

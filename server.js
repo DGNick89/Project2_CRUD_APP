@@ -8,6 +8,8 @@ const methodOverride = require('method-override')
 const session = require('express-session');
 const bcrypt = require('bcrypt')
 const db = require('./DB')
+const setCurrentUser = require('./middleware/set_current_user')
+const ensureLoggedIn = require('./middleware/ensure_logged_in')
 
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
@@ -20,10 +22,23 @@ app.use(session({
     cookie: {maxAge: 1000 * 60 * 60 * 24},
     resave: false,
     saveUninitialized: true
-  }));
+}));
+
+app.use(setCurrentUser)
 
 app.get('/', (req, res) => {
-  res.render('home')  
+    
+    let sql = `
+    SELECT * FROM
+    games;`
+    db.query(sql, (err, result) => {
+        if (err) {
+            console.log(err)            
+        }
+        let games = result.rows
+        res.render('home', {games})
+    })
+    
 })
 
 app.get('/about', (req, res) => {
@@ -64,7 +79,11 @@ app.post('/login' ,(req, res) => {
     })
 })
 
+app.use(ensureLoggedIn)
 
+app.get('/new', (req, res) => {
+    res.render('new')
+})
 
 app.listen(port, (req, res) => {
     console.log(`listening on port ${port}`)

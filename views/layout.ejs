@@ -10,7 +10,12 @@
     <nav>
         <a href="/">HOME</a>
         <a href="/about">ABOUT US</a>
+        <% if (isLoggedIn) { %>
+        <a href="/new">HOST YOUR OWN GAME</a>
         <a href="/login">LOGOUT</a>
+        <% } else { %>
+            <a href="/login">LOGIN</a>
+            <% } %>
 
     </nav>
 

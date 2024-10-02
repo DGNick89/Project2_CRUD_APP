@@ -1,0 +1,6 @@
+<% for (let game of games) { %>
+<h1><%= game.sport %></h1>
+<h2>Where: <%= game.location %></h2>
+<h2>Time: <%= game.time %></h2>
+<h2>Game hosted by: <%= game.user_id %></h2>
+<% } %>
