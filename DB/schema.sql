@@ -12,6 +12,6 @@ CREATE TABLE games (
     id SERIAL PRIMARY KEY,
     sport TEXT,
     location TEXT,
-    time INTEGER,
+    time TIME,
     user_id INTEGER
 );

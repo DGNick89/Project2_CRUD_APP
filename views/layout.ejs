@@ -7,12 +7,17 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+    <% if (isLoggedIn) {%>
+    <p>Logged in as <%= currentUser.name %></p>
+        <% } %>
     <nav>
         <a href="/">HOME</a>
         <a href="/about">ABOUT US</a>
         <% if (isLoggedIn) { %>
         <a href="/new">HOST YOUR OWN GAME</a>
-        <a href="/login">LOGOUT</a>
+        <form action="/session/?_method=delete" method="post">            
+            <button>LOGOUT</button>
+        </form>
         <% } else { %>
             <a href="/login">LOGIN</a>
             <% } %>

@@ -1,3 +1,7 @@
 body {
-    background-color: chartreuse;
+    background-color:aquamarine;
+}
+.profile-pic {
+    border-radius: 50%;
+    width: 50px;
 }

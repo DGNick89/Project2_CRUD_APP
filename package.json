@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
+    "db:build": "node ./db/create_dummy_user.js",
     "dev": "nodemon server.js"
   },
   "keywords": [],
