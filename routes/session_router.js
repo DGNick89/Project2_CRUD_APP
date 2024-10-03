@@ -31,7 +31,7 @@ router.post('/signup', (req, res) => {
                 
                 const user = result.rows[0]
                 console.log(user);
-                res.render('home')
+                res.redirect('/')
             })
         })
     })
