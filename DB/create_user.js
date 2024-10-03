@@ -5,10 +5,6 @@ const db = require('./index.js')
 
 
 
-let name = 'Nick'
-let email = 'nick@sportsAPP.com'
-let plainTextPassword = 'sports'
-let profilePic = 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRnGGwJ6jVmmbR2VV3tTLwK_71S5pB0mY_CKKXH1i3bl5NfNybM'
 let saltRounds = 10
 
 bcrypt.genSalt(saltRounds, (err, salt) => {

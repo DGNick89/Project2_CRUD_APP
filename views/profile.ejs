@@ -1,0 +1,9 @@
+<div class="profile">
+    <h2>Name: <%= user.name %></h2>
+    <img src="<%= user.profile_pic %>" alt="">
+    <h2>Email: <%= user.email %></h2>
+
+    <form action="/profile/edit/<%=user.id %>" method="get">
+        <button>EDIT DETAILS</button>
+    </form>
+</div>

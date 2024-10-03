@@ -1,0 +1,12 @@
+<h1 class="sports-title">games</h1>
+<div class="wrapper">
+    
+        <% for (let sport of sports) { %>
+    <section class="games">
+        <h1 class="sport"><a href="/game/<%=sport.id %>"><%= sport.sport %></a></h1>
+        <h2><%= sport.location %></h2>
+        <h2><%= sport.time %></h2>
+        <h2>Game hosted by: <img class="profile-pic" src="<%=sport.profile_pic %>"> <%= sport.name %></h2>
+    </section>
+        <% } %>
+</div>

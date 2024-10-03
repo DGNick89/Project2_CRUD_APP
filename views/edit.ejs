@@ -1,0 +1,14 @@
+<div class="wrapper-id" id="edit-profile">    
+    <form action="/profile/edit/<%=user.id %>?_method=put" method="post">
+        <label for="">Name</label>
+        <input type="text" name="name" value="<%= user.name %>">
+
+        <label for="">email</label>
+        <input type="email" name="email" value="<%= user.email %>">
+
+        <label for="">Profile photo</label>
+        <input type="text" name="profile_pic" value="<%= user.profile_pic %>">
+
+        <button>UPDATE</button>
+    </form>
+</div>

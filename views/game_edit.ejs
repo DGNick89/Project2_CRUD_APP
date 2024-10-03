@@ -1,0 +1,23 @@
+<form action="/game/edit/<%= game.id %>?_method=put" method="post">
+
+    <label for="">Location</label>
+    <select name="location" id="">
+        <option value="Eastern-suburbs">Eastern Suburbs</option>
+        <option value="Northern-Beaches">Northern Beaches</option>
+        <option value="CBD">CBD</option>
+        <option value="Inner-west">Inner West</option>
+        <option value="North-Sydney">North Sydney</option>
+    </select>
+
+    <label for="">Time</label>
+    <select name="time" id="">
+        <option value="05:00">05:00</option>
+        <option value="05:30">05:30</option>
+        <option value="06:00">06:00</option>
+        <option value="07:00">07:00</option>
+        <option value="07:00">07:30</option>
+        <option value="08:30">08:30</option>
+        <option value="09:00">09:00</option>
+    </select>
+    <button>UPDATE</button>
+</form>

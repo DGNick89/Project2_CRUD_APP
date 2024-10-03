@@ -2,55 +2,98 @@
     border: solid 1px red;
 } */
 
+.permanent-marker-regular {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header {
+    color: #d6ce15;
+    padding: 10px 10px;
+    width: 100%;
+
+}
+
 .title {
     text-align: center;
-    color: white;
+    font-size: 50px;
+    margin-top: 0 auto;
 }
 
 .logged {
-    color: white;
     font-size: 20px;
+    margin: 0;
 }
 
 .sport {
     text-align: center;
 }
 
-nav {
-    border: solid 1px white;
-}
 
 .games {
+    color: chartreuse;
+    background-color: rgb(245, 245, 245, 0.4);
     border-radius: 5%;
-    border: solid 1px white;
+    padding: 5px 5px;
+    margin: 5px;    
+    width: 27%;
+    box-shadow: 10px 5px 5px black;
+}
+.games:hover {
+    background-color: rgb(245, 245, 245);
+}
+
+.players-joined {
+    border-radius: 5%;
     padding: 0 5px;
     margin: 5px;
-    background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(28,121,9,1) 100%);
+    box-shadow: 10px 5px 5px black;
+    background-color: rgb(245, 245, 245, 0.4);
 }
 
 body {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;   
     background-image: url('https://slidescorner.com/wp-content/uploads/2022/09/02-Bob-Green-Grass-Soccer-Field-Background-by-SlidesCorner.jpg');
     background-size: cover;
 }
 .profile-pic {
     border-radius: 50%;
     width: 50px;
+    max-height: 40px;
 }
 
 .wrapper {
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    width: 60%;
-    background: rgb(28,121,9);
-    background: radial-gradient(circle, rgba(28,121,9,1) 0%, rgba(255,255,255,1) 100%);
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
     border-radius: 5%;
     align-items: center;
+    justify-content: space-around;
+}
+
+.wrapper-id {
+    padding-top: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction:row;
+    width: 60%;
+    border-radius: 5%;
+    align-items: center;
+    justify-content: space-evenly;
+    color: chartreuse;
 }
 
 a {
-    color: white;
+    color: #d6ce15;
+}
+
+h2 {
+    color:chartreuse;
 }
 
 nav {
@@ -59,4 +102,68 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+#login-temp {
+    color: white;
+    padding-top: 40px;
+    font-size: 30px;
+    display: block;
+    text-align: center;
+}
+
+#new-game {
+    color: chartreuse;
+    padding-top: 40px;
+    font-size: 50px;
+    display: block;
+    text-align: center;
+}
+
+#edit-profile {
+    text-align: center;
+    padding-top: 50px;
+    display: inline;
+    font-size: 30px;
+}
+
+.profile {
+    text-align: center;
+    font-size: 50px;
+    color: chartreuse;
+}
+
+.about {
+    font-size: 50px;
+    text-align: center;
+    color: chartreuse;
+}
+
+.sport {
+    font-size: 20px;
+    color: white;
+}
+
+.other-games {
+    color: white;
+    text-align: center;
+    font-size: 25px;
+}
+
+.sports-title {
+    text-align: center;
+    color: chartreuse;
+}
+
+.join {
+    margin: 0 40%;
+    background-color: white;
+}
+
+#signup {
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
 }
