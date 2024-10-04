@@ -2,6 +2,11 @@
 
 Welcome to the **Find Your Game**! This web application allows you to discover and join pickup games for various sports in your area. Whether you're looking to shoot some hoops, kick a soccer ball, or play a friendly match of tennis, our platform has you covered.
 
+
+![alt text](<Screenshot 2024-10-04 105501.png>)
+
+
+
 ## Features
 
 - **Find Games by Sport**: Browse and discover pickup games categorized by your favorite sports.
@@ -12,7 +17,7 @@ Welcome to the **Find Your Game**! This web application allows you to discover a
 
 ## Demo
 
-Check out the live application here: [Find Your Game](https://project2-crud-app.onrender.com/)
+Check out the live application here: :rocket: [Find Your Game](https://project2-crud-app.onrender.com/)
 
 ## Getting Started
 
@@ -48,7 +53,7 @@ We welcome contributions to improve the application! To contribute:
 
 ## Contact
 
-For questions or suggestions, feel free to reach out at [nicolasdeguidol@gmail.com].
+For questions or suggestions, feel free to reach out at :alien: [nicolasdeguidol@gmail.com].
 
 ---
 
