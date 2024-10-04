@@ -6,7 +6,7 @@
         </a> 
         <h2>Where: <%= game.location %></h2>
 
-        <h2><%= game.date %></h2>
+        <h2><%= game.date.toUTCString() %></h2>
         <h2>Game hosted by: <img src="<%= game.profile_pic %>" class="profile-pic"> <%= game.name %></h2>
     </section>
 <% } %>

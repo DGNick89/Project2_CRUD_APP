@@ -2,7 +2,7 @@
     <section class="games">
         <h1 class="sport"><%= game.sport %></h1>
         <h2><%= game.location %></h2>
-        <h2><%= game.date %></h2>
+        <h2><%= game.date.toUTCString() %></h2>
         <h2>Game hosted by <img src="<%= game.profile_pic %>" class="profile-pic"> <%= game.name %> </h2>        
         <form action="/game/<%= game.id %>" method="post">
             <% if (currentUser.id !==  game.user_id) {%>
