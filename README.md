@@ -52,7 +52,7 @@ For questions or suggestions, feel free to reach out at [nicolasdeguidol@gmail.c
 
 ---
 
-Thank you for using **PickUp Games Finder**! We hope you find great games and have fun playing!
+Thank you for using **Find Your Game**! We hope you find great games and have fun playing!
 ```
 
 Feel free to customize any sections to better suit your app's branding or specific features!
