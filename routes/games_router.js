@@ -14,15 +14,15 @@ router.post('/new', (req, res) => {
     
     let sport = req.body.sports
     let location = req.body.location
-    let time = req.body.time
+    let date = req.body.date
     let userId = req.session.userId
     const sql =`
     INSERT INTO games
-    (sport, location, time, user_id)
+    (sport, location, user_id, date)
     VALUES
     ($1, $2, $3, $4)
     `
-    db.query(sql, [sport, location, time, userId], (err, result) => {
+    db.query(sql, [sport, location, userId, date], (err, result) => {
         if (err) {
             console.log(err)            
         }
@@ -107,10 +107,10 @@ router.put('/game/edit/:id', (req, res) => {
     let sql = `
     UPDATE games
     SET location = $1,
-    time = $2
+    date = $2
     WHERE id = $3;
     `
-    db.query(sql, [req.body.location, req.body.time, req.params.id],(err, result) => {
+    db.query(sql, [req.body.location, req.body.date, req.params.id],(err, result) => {
         if (err) {
             console.log(err)                       
         }

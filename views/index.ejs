@@ -2,14 +2,18 @@
     <section class="games">
         <h1 class="sport"><%= game.sport %></h1>
         <h2><%= game.location %></h2>
-        <h2><%= game.time %></h2>
+        <h2><%= game.date %></h2>
         <h2>Game hosted by <img src="<%= game.profile_pic %>" class="profile-pic"> <%= game.name %> </h2>        
         <form action="/game/<%= game.id %>" method="post">
             <% if (currentUser.id !==  game.user_id) {%>
             <button class="join"> JOIN GAME</button> 
             <% } %>
         </form> 
-        
+        <form action="/game/edit/<%=game.id%>" method="get">
+            <% if (currentUser.id === game.user_id) { %>
+            <button class="edit-game">EDIT GAME</button>
+            <% } %>
+        </form>
     </section>
     <section class="players-joined">
         <h2>Players in this game: <%=players.length + 1%></h2>
@@ -21,11 +25,7 @@
         <% } %>
         <% } %>
     </section>
-    <form action="/game/edit/<%=game.id%>" method="get">
-        <% if (currentUser.id === game.user_id) { %>
-        <button class="edit-game">EDIT GAME</button>
-        <% } %>
-    </form>
+   
 </div>  
 
 <h2 class="other-games">CHECK OUT OTHER <a href="/sports/<%= game.sport %>"><%= game.sport %></a> games in your area</h2>
