@@ -59,10 +59,11 @@ router.get('/game/:id', (req, res) => {
                 }
                 if (players === 0) {
                     noPlayers
-                }                
-                        
+                }
+                
+                let joinedPlayers = result.rows                        
                 console.log(players);               
-                res.render('index', {game, players, noPlayers})
+                res.render('index', {game, players, noPlayers, joinedPlayers})
             })
             
         })
@@ -80,6 +81,9 @@ router.post('/game/:id', (req, res) => {
         if (err) {
             console.log(err) 
         }
+        
+       
+        
         res.redirect(`/game/${req.params.id}`)
         
     })

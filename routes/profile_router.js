@@ -49,7 +49,7 @@ router.put('/profile/edit/:id', (req, res) => {
         }
         console.log(req.body);
         
-        res.redirect('/profile')
+        res.redirect(`/profile/${req.session.userId}`)
     })
 })
 

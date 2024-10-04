@@ -4,15 +4,15 @@
         <h2><%= game.location %></h2>
         <h2><%= game.date.toUTCString() %></h2>
         <h2>Game hosted by <img src="<%= game.profile_pic %>" class="profile-pic"> <%= game.name %> </h2>        
-        <form action="/game/<%= game.id %>" method="post">
-            <% if (currentUser.id !==  game.user_id) {%>
-            <button class="join"> JOIN GAME</button> 
-            <% } %>
+        <form action="/game/<%= game.id %>" method="post">          
+        <button class="join"> JOIN GAME</button>                            
         </form> 
+        
         <form action="/game/edit/<%=game.id%>" method="get">
             <% if (currentUser.id === game.user_id) { %>
             <button class="edit-game">EDIT GAME</button>
             <% } %>
+            
         </form>
     </section>
     <section class="players-joined">
